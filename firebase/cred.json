@@ -1,0 +1,9 @@
+{
+    "apiKey": "AIzaSyCnl1dF2RbtTSRxPYg1BgTHESjbi4SdlU0",
+    "authDomain": "file-link-generator-3157d.firebaseapp.com",
+    "projectId": "file-link-generator-3157d",
+    "databaseURL":"https://file-link-generator-3157d-default-rtdb.firebaseio.com/",
+    "storageBucket": "file-link-generator-3157d.firebasestorage.app",
+    "messagingSenderId": "720420247353",
+    "appId": "1:720420247353:web:85374ac3a4e7423c617ae8"
+  }
