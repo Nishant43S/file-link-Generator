@@ -111,7 +111,7 @@ def Remove_users():
         st.write(f"Email Id - {i.email}")
         st.write(f"User Id - {i.uid}")
         check_user_verified(i.email)
-        if st.button(label=f"Delete {i.email.split("@")[0]}",key=f"{i.uid}"):
+        if st.button(label=f"Delete {i.email.split("@")[0]}",key=str(i.uid):
             delete_user_by_uid(i.uid)
         st.write("---")
     page.get_next_page()
