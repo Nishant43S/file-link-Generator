@@ -24,11 +24,12 @@ about_app = st.Page(
     icon=":material/person:"
 )
 
-pg = st.navigation(
+page = st.navigation(
     pages=[admin_page,add_user,about_app],
     expanded=False,position="sidebar"
 )
-pg.run()
+
+page.run()
 
 
 app_sidebar = st.sidebar
