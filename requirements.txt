@@ -8,6 +8,3 @@ streamlit-webrtc==0.47.9
 streamlit-modal==0.1.2
 firebase-admin
 Pyrebase4
-gcloud
-google-cloud-storage
-pkg_resources
