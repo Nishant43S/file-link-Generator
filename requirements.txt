@@ -10,3 +10,4 @@ firebase-admin
 Pyrebase4
 gcloud
 google-cloud-storage
+pkg_resources
