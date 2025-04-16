@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Token</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS for slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/token_input.css') }}">
+</head>
+<body>
+    <div class="card-container">
+        <h1 class="title">Access Token</h1>
+        
+        <div class="input-section">
+            <form method="POST">
+                <input type="text" name="access_token" class="token-input" required placeholder="Enter Access Token">
+                
+                <div class="d-flex align-items-center mt-3">
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <span class="error-message">{{ messages[0] }}</span>
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </form>
+        </div>
+        
+        <div class="info-box">
+
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                  <img src="{{ url_for('static', filename='assets/1.jpg') }}" alt="Image 1" />
+                  <img src="{{ url_for('static', filename='assets/2.jpg') }}" alt="Image 2" />
+                  <img src="{{ url_for('static', filename='assets/3.jpg') }}" alt="Image 3" />
+                  <img src="{{ url_for('static', filename='assets/4.jpg') }}" alt="Image 4" />
+                  <img src="{{ url_for('static', filename='assets/5.jpg') }}" alt="Image 5" />
+                  <img src="{{ url_for('static', filename='assets/6.jpg') }}" alt="Image 6" />
+                  <img src="{{ url_for('static', filename='assets/7.jpg') }}" alt="Image 7" />
+                </div>
+            
+                <div class="nav-arrow left-arrow" onclick="prevSlide()">
+                    <span class="material-icons icon">arrow_left</span>
+                </div>
+                <div class="nav-arrow right-arrow" onclick="nextSlide()">
+                    <span class="material-icons icon">arrow_right</span>
+                </div>
+              </div>
+        </div>
+            <a class="dropbox-link" target="_blank" href="https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps">Dropbox Console</a>
+        
+       
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS for slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- external js -->
+    <script src="{{ url_for('static', filename='js/token_input.js') }}"></script>
+</body>
+</html>
