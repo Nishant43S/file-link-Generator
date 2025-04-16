@@ -1,0 +1,218 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #131c27;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.custom-file-upload {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.upload-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: 2px dashed #6c757d;
+    border-radius: 10px;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+.upload-btn:hover {
+    background-color: #e2e6ea;
+    border-color: #343a40;
+    color: #343a40;
+}
+#file-name-box {
+    display: none;
+    margin-top: 15px;
+}
+
+#error-box{
+    margin-top: 15px;
+}
+
+#submit_button:hover{
+    background-color: #5e17eb;
+}
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+    border: none;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: white;
+    background-color: transparent;
+    border-bottom: 2px solid #6c5ce7;
+}
+.logout-btn {
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 25px;
+    border: none;
+    transition: 0.4s ease-in;
+    }
+.logout-btn:hover{
+    background-color: #6643b5;
+}
+.user-name{
+    color: whitesmoke;
+    cursor: pointer;
+}
+.upload-box {
+    background-color: white;
+    color: #131c27;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.btn-submit, .btn-download {
+    background-color: #6c63ff;
+    color: white;
+}
+
+.btn-submit:hover, .btn-download:hover {
+    background-color: #6643b5;
+    color: #f8f9fa;
+}
+
+#submit_button:hover{
+    background-color: #5e17eb;
+}
+.qr-section {
+    margin-top: 2rem;
+}
+
+.qr-image{
+    border-radius: 7px;
+}
+.main-heading{
+    color: whitesmoke;
+    font-size: 53px;
+}
+@media (max-width: 768px) {
+    .navbar-collapse {
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: left;
+        color: #f8f9fa;
+    }
+    .qr-layout {
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+
+/* copy button */
+
+.copy_text{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 0;
+}
+.copy-link {
+    color: #6643b5;
+    text-decoration: none;
+    margin-top: 32px;
+    /* margin-left: 13px; */
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.copy-link:hover {
+    color: #8594e4;
+}
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.show-tooltip {
+    opacity: 1;
+    transform: translate(-50%, -10px);
+}
+        
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+.main-heading {
+font-size: 48px;
+}
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media (max-width: 992px) {
+.main-heading {
+font-size: 42px;
+}
+}
+
+/* Medium devices (tablets, 768px to 991px) */
+@media (max-width: 768px) {
+.main-heading {
+font-size: 36px;
+}
+}
+
+/* Small devices (phones, 576px to 767px) */
+@media (max-width: 576px) {
+.main-heading {
+font-size: 30px;
+}
+}
+
+/* Extra small devices (less than 576px) */
+@media (max-width: 400px) {
+.main-heading {
+font-size: 26px;
+}
+}
