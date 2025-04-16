@@ -1,10 +1,5 @@
 flask
-python-dotenv==1.0.0
-streamlit
-streamlit-server-state==0.17.1
-streamlit-toggle-switch==1.0.2
-streamlit-vertical-slider==2.5.5
-streamlit-webrtc==0.47.9
-streamlit-modal==0.1.2
 firebase-admin
-Pyrebase4
+pyrebase4
+qrcode
+dropbox
