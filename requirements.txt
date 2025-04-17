@@ -3,3 +3,4 @@ firebase-admin
 pyrebase4
 qrcode
 dropbox
+Werkzeug==3.0.1
