@@ -127,6 +127,11 @@ to run
   
 ![Screenshot 2025-04-18 202622](https://github.com/user-attachments/assets/7ca57a5d-9596-4083-8f4a-17ed9b37df2f)
 
+- forgot password
+
+![Screenshot 2025-04-18 204020](https://github.com/user-attachments/assets/ee5c5f87-f83a-44bb-80c8-daf171c8e06c)
+
+
 - token input page
 
 ![Screenshot 2025-04-18 202925](https://github.com/user-attachments/assets/9a897dc2-0093-4578-b3bb-ae18caa8e9bc)
