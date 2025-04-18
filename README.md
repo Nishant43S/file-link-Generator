@@ -66,12 +66,14 @@ Live app [Click Here to Use](https://file-link-generator-major-project.onrender.
 To run this project locally, use the following commands:
 
 ```bash
-pip install -r requirements.txt
-
-
-to run 
+  pip install -r requirements.txt
+```
+to run
 
 ```bash
-python wsgi.py
+  python wsgi.py
+```
+
+
 
 
