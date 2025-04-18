@@ -23,7 +23,7 @@ Live app [Click Here to Use](https://file-link-generator-major-project.onrender.
   - Copy the download link to clipboard for easy sharing
 
 - 💻 **Responsive UI**
-  - Drag-and-drop file upload interface
+  - file upload interface
   - Clean, modern design using Bootstrap 5
   - Font Awesome icons for intuitive visuals
 
@@ -73,6 +73,25 @@ to run
 ```bash
   python wsgi.py
 ```
+
+---
+
+## 📁 Project Directory Structure
+
+📂 project-root/
+├── 📂 templates/         # HTML templates
+│   └── 📄 *.html
+├── 🌐 static/            # Static files
+│   ├── 📂 js/            # JavaScript files
+│   ├── 📂 css/           # CSS files
+│   └── 🖼️ assets/        # Images & other assets
+├── 🐍 __pycache__/       # Compiled Python files
+│   └── 📦 *.pyc
+├── 🔑 firebase/          # Firebase credentials
+│   └── 🔒 credentials/
+├── ⚙️ __init__.py        # Flask app package initializer
+└── 🚀 wsgi.py            # Entry point to run the app
+
 
 
 
