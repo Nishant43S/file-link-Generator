@@ -108,6 +108,7 @@ to run
 
 ## 📷 project screenshots
 
+- landing page
 ![Screenshot 2025-04-18 201414](https://github.com/user-attachments/assets/712fb02f-4363-49ef-916b-d5ef1a785ac9)
 
 
@@ -116,5 +117,9 @@ to run
 
 ![Screenshot 2025-04-18 201454](https://github.com/user-attachments/assets/0ab70203-4b67-4e67-ac28-53fa4982eb81)
 
+
+- login page
+
+![Screenshot 2025-04-18 202228](https://github.com/user-attachments/assets/f851adec-dbc2-43d0-ab56-f245dbe93afd)
 
 
