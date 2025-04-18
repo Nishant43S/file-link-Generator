@@ -106,4 +106,15 @@ to run
 - 🔐 Firebase (for authentication)  
 - ☁️ Dropbox (for cloud storage)
 
+## 📷 project screenshots
+
+![Screenshot 2025-04-18 201414](https://github.com/user-attachments/assets/712fb02f-4363-49ef-916b-d5ef1a785ac9)
+
+
+![Screenshot 2025-04-18 201438](https://github.com/user-attachments/assets/1975d542-bb3a-4576-86a5-5595d3bb2df7)
+
+
+![Screenshot 2025-04-18 201454](https://github.com/user-attachments/assets/0ab70203-4b67-4e67-ac28-53fa4982eb81)
+
+
 
