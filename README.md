@@ -97,5 +97,13 @@ to run
 ```
 
 
+## 🛠️ Technologies Used
+
+- 🐍 Python  
+- 🔥 Flask  
+- 🌐 HTML, CSS, JavaScript  
+- 🎨 Bootstrap 5  
+- 🔐 Firebase (for authentication)  
+- ☁️ Dropbox (for cloud storage)
 
 
