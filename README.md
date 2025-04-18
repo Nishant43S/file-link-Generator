@@ -61,15 +61,12 @@ Live app [Click Here to Use](https://file-link-generator-major-project.onrender.
 
 ---
 
-## 📷 Screenshots
+## 🧪 Run Locally
 
-*(Add screenshots here if available)*
+To run this project locally, use the following commands:
 
----
-
-## 📬 Contact
-
-For any queries or feedback, feel free to reach out or contribute to the project!
-
----
+```bash
+pip install -r requirements.txt
+python wsgi.py
+```
 
