@@ -67,11 +67,11 @@ To run this project locally, use the following commands:
 
 ```bash
 pip install -r requirements.txt
-```
+
 
 to run 
 
 ```bash
 python wsgi.py
-```
+
 
