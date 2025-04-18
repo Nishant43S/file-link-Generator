@@ -127,4 +127,19 @@ to run
   
 ![Screenshot 2025-04-18 202622](https://github.com/user-attachments/assets/7ca57a5d-9596-4083-8f4a-17ed9b37df2f)
 
+- token input page
+
+![Screenshot 2025-04-18 202925](https://github.com/user-attachments/assets/9a897dc2-0093-4578-b3bb-ae18caa8e9bc)
+
+- upload page
+
+![Screenshot 2025-04-18 203602](https://github.com/user-attachments/assets/f4ca529d-3a8c-4f5d-9c94-d678e0d53c2b)
+
+![Screenshot 2025-04-18 203628](https://github.com/user-attachments/assets/413bc245-7b09-4f44-9895-829cfa9df91f)
+
+
+
+
+
+
 
