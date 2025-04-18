@@ -91,6 +91,7 @@ to run
 ├── 🔑 firebase/          # Firebase credentials
 │   └── 🔒 credentials/
 ├── ⚙️ __init__.py        # Flask app package initializer
+├── 📄 app.py             # Flask app backend
 └── 🚀 wsgi.py            # Entry point to run the app
 ```
 
