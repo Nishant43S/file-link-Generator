@@ -78,6 +78,7 @@ to run
 
 ## 📁 Project Directory Structure
 
+```plaintext
 📂 project-root/
 ├── 📂 templates/         # HTML templates
 │   └── 📄 *.html
@@ -91,7 +92,7 @@ to run
 │   └── 🔒 credentials/
 ├── ⚙️ __init__.py        # Flask app package initializer
 └── 🚀 wsgi.py            # Entry point to run the app
-
+```
 
 
 
