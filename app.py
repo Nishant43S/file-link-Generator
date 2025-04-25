@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, make_response
 import firebase_admin
 from firebase_admin import credentials, auth
 import json
@@ -9,7 +9,7 @@ from threading import Timer
 import qrcode
 import io
 import base64
-
+import random
 
 app = Flask(__name__)
 app.secret_key = 'c3b579c35369ea25ab99c3e64b438e3f7b826cd087a79e50c439c48d388dbc0e'
@@ -46,10 +46,10 @@ def handle_file_upload(file):
     except Exception as e:
         return f"error: {e}"
 
-
-# Initialize Firebase Admin SDK
-cred = credentials.Certificate("firebase/key.json")
-firebase_admin.initialize_app(cred)
+if not firebase_admin._apps:
+    # Initialize Firebase Admin SDK
+    cred = credentials.Certificate("firebase/key.json")
+    firebase_app = firebase_admin.initialize_app(cred,name=f"fire app - {random.randint(100,10000)}")
 
 def read_cred(file_path):
     """Reads a JSON file config"""
@@ -75,23 +75,45 @@ def register():
         email = request.form['email']
         password = request.form['password']
         try:
-            user = login_auth.create_user_with_email_and_password(email=email, password=password)
-            return redirect(url_for('login'))
+            login_auth.create_user_with_email_and_password(email=email,password=password)
+            resp = make_response(redirect(url_for('login')))
+            resp.set_cookie('email', '', expires=0)
+            resp.set_cookie('password', '', expires=0) # ← Go to login page after register
+            return resp
         except Exception as e:
             return render_template('register.html',email_error="Email already exists")
     return render_template('register.html')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    # Auto-login from cookies
+    if request.method == 'GET' and 'email' in request.cookies and 'password' in request.cookies:
+        try:
+            email = request.cookies.get('email')
+            password = request.cookies.get('password')
+            user = login_auth.sign_in_with_email_and_password(email=email, password=password)
+            session['user'] = email
+            if 'access_token' in session:
+                return redirect(url_for('upload_file'))
+            else:
+                return redirect(url_for('app_page'))
+        except:
+            pass
+
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
         try:
-            user = login_auth.sign_in_with_email_and_password(email=email,password=password)
-            session['user'] = email  # Store user session
-            return redirect(url_for('app_page'))
-        except Exception as e:
-            return render_template('login.html',error_msg="Invalid Credentials") 
+            user = login_auth.sign_in_with_email_and_password(email=email, password=password)
+            session['user'] = email
+            resp = make_response(redirect(url_for('app_page')))
+            resp.set_cookie('email', email, max_age=30*24*60*60)
+            resp.set_cookie('password', password, max_age=30*24*60*60)
+            return resp
+        except:
+            return render_template('login.html', error_msg="Invalid Credentials")
+
     return render_template('login.html')
 
 # Forgot Password 
@@ -101,14 +123,13 @@ def forgot_password():
         email = request.form['email']
         try:
             # Send reset password email
-            reset_link = auth.generate_password_reset_link(email)
+            reset_link = auth.generate_password_reset_link(email=email,app=firebase_app)
             print(reset_link)
             return render_template('forgot_password.html',reset_link=reset_link)
         except Exception as e:
             return render_template('forgot_password.html',error="Invalid Email")
 
     return render_template('forgot_password.html')
-
 
 
 @app.route('/app')
@@ -189,6 +210,11 @@ def How_to_use():
 @app.route('/logout',)
 def logout():
     session.pop('user', None)
-    return redirect(url_for('home'))
+    session.pop('access_token', None)
+    resp = make_response(redirect(url_for('home')))
+    resp.set_cookie('email', '', expires=0)
+    resp.set_cookie('password', '', expires=0)
+    return resp
+
 
 
