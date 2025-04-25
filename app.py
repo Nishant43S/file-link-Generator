@@ -151,7 +151,7 @@ def token_input():
                 session['access_token'] = token
                 return redirect(url_for('upload_file'))
             except AuthError:
-                flash('Invalid Access Token!')
+                flash('Invalid Token!')
         return render_template('token_input.html')
     return redirect(url_for('login'))
     
