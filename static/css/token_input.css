@@ -128,7 +128,7 @@ body {
 .error-message {
     color: #dc3545;
     margin-left: 15px;
-    font-size: 1.1rem;
+    font-size: 15px;
 }
 
 .info-box {
@@ -184,9 +184,10 @@ body {
     }
 
 }
+
 .dropbox-link{
     text-decoration: none;
-    color: #0f1924;
+    color: orangered;
     cursor: pointer;
     transition: 0.4s ease-in;
 }
