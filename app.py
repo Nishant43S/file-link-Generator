@@ -141,6 +141,7 @@ def app_page():
 
 @app.route('/token_input', methods=['GET', 'POST'])
 def token_input():
+    user_name = session['user']
     if "user" in session:
         global db_client
         if request.method == 'POST':
@@ -149,15 +150,16 @@ def token_input():
                 db_client = dropbox.Dropbox(token)
                 db_client.users_get_current_account()
                 session['access_token'] = token
-                return redirect(url_for('upload_file'))
+                return redirect(url_for('upload_file', user=user_name))
             except AuthError:
                 flash('Invalid Token!')
         return render_template('token_input.html')
     return redirect(url_for('login'))
     
 
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_file():
+@app.route('/upload',methods=['GET', 'POST'], defaults={"user":"User Name"})
+@app.route('/upload/<user>', methods=['GET', 'POST'])
+def upload_file(user):
     if 'user' in session:
         global db_client
         if 'access_token' not in session:
