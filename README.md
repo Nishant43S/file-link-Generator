@@ -67,6 +67,10 @@ Live app <a href="https://file-link-generator-major-project.onrender.com" target
 To run this project locally, use the following commands:
 
 ```bash
+  git clone https://github.com/Nishant43S/file-link-Generator.git
+```
+
+```bash
   pip install -r requirements.txt
 ```
 to run
@@ -144,7 +148,40 @@ to run
 
 
 
+## admin panel
+
+![Screenshot 2025-04-23 004309](https://github.com/user-attachments/assets/8da76c83-cea9-47a3-8e93-38bb74a76001)
+
+![Screenshot 2025-04-23 004429](https://github.com/user-attachments/assets/04074cdd-74cf-4b94-a1e2-752dcb5c4b8d)
 
 
+
+![Screenshot 2025-04-23 004640](https://github.com/user-attachments/assets/7eb2ad7f-2a9f-4cb5-9076-91bf6ea0a2da)
+
+![Screenshot 2025-04-23 005402](https://github.com/user-attachments/assets/ae8bc164-33df-469d-a746-85e192856875)
+
+
+![Screenshot 2025-04-23 005734](https://github.com/user-attachments/assets/6da8a462-aa41-4637-879c-73e96acab21d)
+
+
+
+
+
+![Screenshot 2025-04-23 005900](https://github.com/user-attachments/assets/266db5de-2817-4cf0-b81b-796557396fd6)
+
+
+![Screenshot 2025-04-23 005959](https://github.com/user-attachments/assets/f6114869-9b15-411e-94c0-14278157ef5b)
+
+
+---
+
+```bash
+  pip install -r requirements.txt
+```
+to run
+
+```bash
+  python -m streamlit run streamlit_app.py
+```
 
 
