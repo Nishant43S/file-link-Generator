@@ -172,6 +172,32 @@ to run
 
 ![Screenshot 2025-04-23 005959](https://github.com/user-attachments/assets/f6114869-9b15-411e-94c0-14278157ef5b)
 
+---
+
+## 📁 Project Directory Structure
+
+```plaintext
+📂 project-root/
+📂 project-root/
+├── 📂 .streamlit/                 # Streamlit configuration
+│   └── ⚙️ config.toml
+├── 🐍 __pycache__/            # Compiled Python files
+│   └── 📦 *.pyc
+├── 🎨 css/                             # Custom CSS files
+│   └── 📄 *.css
+├── 📄 html/                           # HTML files
+│   └── 📄 *.html
+├── 🔐 firebase/                    # Firebase credentials
+│   └── 🔒 credentials/
+├── ⚙️ __init__.py                  # App initializer
+├── 🔥 firebase.py                # Firebase authentication functions
+├── 📘 about_app.py           # About the application content
+├── ➕ add_user.py              # Script to add new users
+├── 🛠️ admin_page.py        # Main admin features and UI
+├── 📦 requirements.txt     # Project dependencies
+├── 🚀 streamlit_app.py     # Main entry point to run Streamlit app
+└── 🖥️ admin.bat                  # Batch file to launch the admin app
+```
 
 ---
 
