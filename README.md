@@ -175,6 +175,8 @@ to run
 
 ---
 
+### to run admin panel
+
 ```bash
   pip install -r requirements.txt
 ```
