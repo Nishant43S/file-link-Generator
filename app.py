@@ -94,8 +94,9 @@ def login():
             password = request.cookies.get('password')
             user = login_auth.sign_in_with_email_and_password(email=email, password=password)
             session['user'] = email
+            user_name = session['user']
             if 'access_token' in session:
-                return redirect(url_for('upload_file'))
+                return redirect(url_for('upload_file', user=user_name))
             else:
                 return redirect(url_for('app_page'))
         except:
