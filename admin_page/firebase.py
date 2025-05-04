@@ -8,7 +8,7 @@ import dropbox
 from dropbox.exceptions import AuthError
 import humanize
 import random
-
+import importlib
 
 
 # Function to validate token
@@ -61,14 +61,13 @@ def delete_all_dropbox_files(access_token: str) -> str:
     except Exception as e:
         return f"❌ Error: {str(e)}"
 
-# # Initialize Firebase Admin SDK
 
+importlib.reload(firebase_admin)
+# Initialize Firebase Admin
+if not firebase_admin._apps:
+    cred = credentials.Certificate("firebase_app/Key.json")
+    firebase_admin.initialize_app(cred)
 
-def firebase_app(app_name):
-    cred = credentials.Certificate("firebase_app/key.json")
-    firebase_admin.initialize_app(cred,
-    name=f"{app_name} - {random.randint(1000,10000)}"
-    )
 
 def read_cred(file_path):
     """Reads a JSON file config"""
@@ -180,6 +179,6 @@ def Remove_users():
 def Reset_password(Email_id):
     try:
         reset_link = auth.generate_password_reset_link(Email_id)
-        return reset_link
+        return st.markdown(f"<a href='{reset_link}'>reset password</a>",unsafe_allow_html=True)
     except Exception as e:
         st.warning(f"Error... {e}",icon="⚠️")
