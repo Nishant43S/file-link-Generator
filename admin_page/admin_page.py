@@ -24,6 +24,10 @@ def insert_css(css_file:str):
 app_sidebar = st.sidebar
 
 with app_sidebar:
+    name_of_app = st.text_input(
+        label="app name",key='app name'
+    )
+    # firebase_app(name_of_app)
     Display_all_user = st.checkbox(
         label="Get all users",
         key="all users",
