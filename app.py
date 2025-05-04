@@ -10,6 +10,7 @@ import qrcode
 import io
 import base64
 import random
+import importlib
 
 app = Flask(__name__)
 app.secret_key = 'c3b579c35369ea25ab99c3e64b438e3f7b826cd087a79e50c439c48d388dbc0e'
@@ -46,6 +47,7 @@ def handle_file_upload(file):
     except Exception as e:
         return f"error: {e}"
 
+importlib.reload(firebase_admin)
 if not firebase_admin._apps:
     # Initialize Firebase Admin SDK
     cred = credentials.Certificate("firebase/key.json")
